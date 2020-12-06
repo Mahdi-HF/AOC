@@ -15,8 +15,7 @@ int main() {
         } else {
             std::set<char> hasSeen;
             for (auto el : st2) {
-                if (st2.count(el) == number and !hasSeen.count(el))
-                    finalRes2++;
+                if (st2.count(el) == number and !hasSeen.count(el)) finalRes2++;
                 hasSeen.insert(el);
             }
             finalRes += st.size();
@@ -25,6 +24,13 @@ int main() {
             number = 0;
         }
     }
+    std::set<char> hasSeen;
+    for (auto el : st2) {
+        if (st2.count(el) == number and !hasSeen.count(el)) finalRes2++;
+        hasSeen.insert(el);
+    }
+    finalRes += st.size();
+
     std::cout << "part one: " << finalRes << std::endl;
     std::cout << "part two: " << finalRes2 << std::endl;
 
