@@ -3,7 +3,9 @@
 using namespace std;
 vector<int> vec;
 
-int main() {
+#define int long long
+
+int32_t main() {
     int n;
     while (cin >> n) vec.push_back(n);
 
@@ -44,7 +46,7 @@ int main() {
                     if (kk == st.size() - 1) max = el;
                     kk++;
                 }
-                cout << "part two: " << min + max << endl;
+                cout << "part Two: " << min + max << endl;
                 found = true;
                 break;
             }
